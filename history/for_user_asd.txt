@@ -1,0 +1,42 @@
+nick3 : hello
+nick1 : hello
+John_Connor :  fsadfasdf 
+John_Connor : a sdfasdf s
+John_Connor : asd fasd fsad
+asd : sdf sdaf 
+asd : as df sdaf
+[ asd ] private [ John_Connor ]: as dfsdf asd
+asd : as df asd
+John_Connor : 123 123 12
+John_Connor : 1 231 2312 3
+John_Connor : 1 2312 31
+asd : sdf safd 
+John_Connor : dsfa sdf asd
+John_Connor : 12312 3123 123 123
+asd : sd fsdfasdf asdf asdf
+asd : asd fas dfasd f
+asd : as df asdf sd 
+John_Connor : e rtwert wertw ertwe rt
+John_Connor : we rtwe rtwert wert wer
+rty : sdfg dsfg d
+rty : sdfg sdfgsdfg sdfg
+rty : sdf gsdf gds
+John_Connor : as dfsad 
+John_Connor : as dfsad f
+John_Connor : q sdr sdfg
+[ asd ] private [ John_Connor ]: hg jfghj
+[ asd ] private [ asd ]: fgh jgfh 
+asd : 123123 123123 12312
+John_Connor : 222222222 2 2 2 22 2 
+asd : as dfsad f
+John_Connor : asdf asd f
+John_Connor : asdf sdf
+[ asd ] private [ John_Connor ]: asd asd as
+[ asd ] private [ John_Connor ]: asdf sadf asd
+[ ASA ] private [ asd ]: hi
+[ rty ] private [ asd ]: hello
+ketee : Hello
+ketee : Hello
+ketee : Hello
+[ ketee ] private [ asd ]: :)
+

@@ -59,9 +59,7 @@ public class ClientHandler {
                                     sendMsg("/authok " + newNick);
                                     server.subscribe(this);
                                     socket.setSoTimeout(0);
-                                    //==============//
                                     sendMsg(SQLHandler.getMessageForNick(nickname));
-                                    //==============//
                                     break;
                                 } else {
                                     sendMsg("С этим логином уже вошли в чат");
