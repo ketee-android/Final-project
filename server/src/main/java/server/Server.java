@@ -5,14 +5,22 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
     private List<ClientHandler> clients;
     private AuthService authService;
+    private ExecutorService executorService;
+
+    public ExecutorService getExecutorService() {
+        return executorService;
+    }
 
     public Server() {
         clients = new CopyOnWriteArrayList<>();
-//        authService = new SimpleAuthService();
+        executorService = Executors.newCachedThreadPool();
+        //        authService = new SimpleAuthService();
         //==============//
         if (!SQLHandler.connect()) {
             throw new RuntimeException("Не удалось подключиться к БД");
@@ -37,6 +45,7 @@ public class Server {
             e.printStackTrace();
         } finally {
             SQLHandler.disconnect();
+            executorService.shutdown();
             try {
                 socket.close();
             } catch (IOException e) {

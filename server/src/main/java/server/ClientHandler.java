@@ -23,7 +23,7 @@ public class ClientHandler {
             out = new DataOutputStream(socket.getOutputStream());
             System.out.println("Client connected " + socket.getRemoteSocketAddress());
 
-            new Thread(() -> {
+            server.getExecutorService ().execute (() -> {
                 try {
                     socket.setSoTimeout(120000);
 
@@ -127,7 +127,7 @@ public class ClientHandler {
                         e.printStackTrace();
                     }
                 }
-            }).start();
+            });
 
         } catch (IOException e) {
             e.printStackTrace();
