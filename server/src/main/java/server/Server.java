@@ -7,11 +7,14 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Server {
     private List<ClientHandler> clients;
     private AuthService authService;
     private ExecutorService executorService;
+    private static final Logger logger = Logger.getLogger (Server.class.getName());
 
     public ExecutorService getExecutorService() {
         return executorService;
@@ -23,7 +26,8 @@ public class Server {
         //        authService = new SimpleAuthService();
         //==============//
         if (!SQLHandler.connect()) {
-            throw new RuntimeException("Не удалось подключиться к БД");
+//            throw new RuntimeException("Не удалось подключиться к БД");
+            logger.log (Level.INFO, "Ошибка подключения к базе данных");
         }
         authService = new DBAuthServise();
         //==============//
@@ -34,7 +38,8 @@ public class Server {
 
         try {
             server = new ServerSocket(PORT);
-            System.out.println("Server started");
+//            System.out.println("Server started");
+            logger.log (Level.INFO, "Server started");
 
             while (true) {
                 socket = server.accept();
